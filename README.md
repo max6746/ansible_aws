@@ -1,5 +1,5 @@
 # ansible_aws
-# Demo by: KUMAR MAYANK
+# Illustration by: KUMAR MAYANK
 Ansible can be used to define, deploy, and manage a wide variety of AWS services.
 Even the most complicated of AWS environments can be easily described in Ansible playbooks.
 Ansible has nearly 100 modules supporting AWS capabilities. 
