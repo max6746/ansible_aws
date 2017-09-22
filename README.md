@@ -38,3 +38,5 @@ Elaboration:
      4. tasks [ansible/roles/http/tasks/main.yml] conatins all the tasks under http role.
      5. templates [ansible/roles/http/templates/testing.conf.j2] conatins templates which can support usage of variables, loops. This demo includes http conf file.
      6. vars [ansible/roles/http/vars/main.yml] contains all the variables used in role "http".
+     
+P.S. Report on illustration: #Ansible - Orchestration of EC2 Instance.pdf
