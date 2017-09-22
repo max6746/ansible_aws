@@ -1,0 +1,45 @@
+---
+- name: Add Http Repository
+  yum_repository:
+    name: http
+    description: HTTP YUM repo
+    baseurl: http://mirror.centos.org/centos/7/os/x86_64/
+    gpgcheck: no
+
+- name: Install HTTPD
+  package:
+    name: httpd
+    state: latest
+  notify:
+    - Start Http
+
+- name: create Directory
+  file: 
+    path: /{{ documentroot }}
+    state: directory
+    mode: 0755
+
+- name: Add index.html
+  copy:
+    src: index.html
+    dest: /{{ documentroot }}
+    owner: root
+    group: root
+
+- name: Add Http config
+  template:
+    src: testing.conf.j2
+    dest: /etc/httpd/conf.d/testing.conf
+    owner: root
+    group: root
+
+- name: Flush Iptables
+  iptables:
+    flush: true
+
+- name: Permissive SELinux
+  selinux:
+    policy: targeted
+    state: permissive
+  notify:
+    - Reload Http

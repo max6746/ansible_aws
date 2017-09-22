@@ -1,0 +1,11 @@
+region: ap-south-1
+instance_type: t2.micro
+# ami:   # Ubuntu 16.04 LTS
+ami: ami-e41b618b  
+project_name: testing
+env: staging
+app_code_user: "mayank" # remote user
+hoststring: "ansible_ssh_user=mayank ansible_ssh_private_key_file=../aws-private.pem"
+hostpath: "../hosts"
+documentroot: mywebsite
+

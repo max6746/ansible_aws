@@ -1,0 +1,6 @@
+---
+- name: Start Http
+  service: name=httpd state=started
+
+- name: Reload Http
+  service: name=httpd state=reloaded
