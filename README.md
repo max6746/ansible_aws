@@ -5,4 +5,10 @@ Ansible has nearly 100 modules supporting AWS capabilities.
 This project describes an demo to configure an ec2 instance with httpd service ( apache server).
 
 Set up:
-Use "aws.sh" while launching driver EC2 instance.
+1. Use "aws.sh" while launching driver EC2 instance.
+
+![ScreenShot](https://github.com/max6746/ansible_aws/blob/master/Screenshot%20(543).png)
+
+2. Edit and place .boto in ~ as ~/.boto
+
+3. Run site.yml as $ ansible-playbook site.yml
