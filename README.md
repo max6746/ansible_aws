@@ -11,4 +11,4 @@ Set up:
 
 2. Edit and place .boto in ~ as ~/.boto
 
-3. Run site.yml as $ ansible-playbook site.yml
+3. Run ansible/site.yml as $ ansible-playbook site.yml
